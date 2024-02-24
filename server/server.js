@@ -33,7 +33,6 @@ server.use(
       secure: true,
       httpOnly: true,
       sameSite: "none",
-      domain: "https://hanger-2p25.onrender.com",
     },
   })
 );
