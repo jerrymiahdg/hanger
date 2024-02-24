@@ -9,7 +9,7 @@ const Nav = () => {
   const navigate = useNavigate();
 
   const logOutClickHandler = () => {
-    fetch(`${API_URL}//localhost:3000}/users/logOut`, {
+    fetch(`${API_URL}/users/logOut`, {
       method: "POST",
       credentials: "include",
       headers: {
