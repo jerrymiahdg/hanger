@@ -20,6 +20,8 @@ server.use(
 
 const myStore = new SequelizeStore({ db: sequelize });
 
+server.set("trust proxy", 1);
+
 server.use(
   session({
     secret: "milpitascalifornia",
