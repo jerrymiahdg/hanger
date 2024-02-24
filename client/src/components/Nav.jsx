@@ -2,14 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import icon from "./clocat.png";
 import Underline from "./Underline";
-import { Context } from "../App";
+import { API_URL, Context } from "../App";
 
 const Nav = () => {
   const ctx = useContext(Context);
   const navigate = useNavigate();
 
   const logOutClickHandler = () => {
-    fetch("http://localhost:3000/users/logOut", {
+    fetch(`${API_URL}//localhost:3000}/users/logOut`, {
       method: "POST",
       credentials: "include",
       headers: {
