@@ -10,7 +10,9 @@ import Edit from "./pages/Edit";
 
 export const Context = createContext();
 
-export const API_URL = "http://localhost:3000";
+// export const API_URL = "http://localhost:3000";
+
+export const API_URL = "https://hanger-2p25.onrender.com";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
