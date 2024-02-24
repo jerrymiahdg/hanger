@@ -29,7 +29,7 @@ server.use(
     cookie: {
       secure: false,
       sameSite: "none",
-      httpOnly: false,
+      httpOnly: true,
     },
   })
 );
