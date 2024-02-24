@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Context } from "../App";
+import { API_URL, Context } from "../App";
 
 const LogIn = () => {
   const [username, setUsername] = useState("");
@@ -17,7 +17,7 @@ const LogIn = () => {
     e.preventDefault();
 
     if (!ctx.loggedIn) {
-      fetch("http://localhost:3000/users/logIn", {
+      fetch(`${API_URL}/users/logIn`, {
         method: "POST",
         credentials: "include",
         headers: {
