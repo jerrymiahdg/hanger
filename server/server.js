@@ -30,7 +30,10 @@ server.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: false,
+      secure: true,
+      httpOnly: true,
+      sameSite: "none",
+      domain: "https://hanger-client.onrender.com/",
     },
   })
 );
