@@ -26,7 +26,9 @@ server.use(
     store: myStore,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false, sameSite: "none", httpOnly: "false" },
+    sameSite: "none",
+    httpOnly: false,
+    cookie: { secure: false },
   })
 );
 
