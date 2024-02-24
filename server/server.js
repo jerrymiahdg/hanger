@@ -12,7 +12,7 @@ server.use(bodyParser.urlencoded({ extended: false }));
 server.use(express.json());
 server.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://hanger-client.onrender.com"],
     credentials: true,
   })
 );
