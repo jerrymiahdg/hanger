@@ -8,6 +8,7 @@ const Sequelize = require("sequelize");
 const cors = require("cors");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const path = require("path");
 
 server.set("trust proxy", 1);
 
@@ -42,6 +43,10 @@ const clothingItemsRoute = require("./routes/clothingItems");
 
 server.use("/users", usersRoute);
 server.use("/clothingItems", clothingItemsRoute);
+
+server.get("/assets/logo", (req, res) => {
+  res.sendFile(path.join(__dirname + "/assets/clocat.png"));
+});
 
 sequelize
   .sync()
