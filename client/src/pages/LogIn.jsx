@@ -9,9 +9,11 @@ const LogIn = () => {
   const ctx = useContext(Context);
   const navigate = useNavigate();
 
-  if (ctx.isLoggedIn) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (ctx.isLoggedIn) {
+      navigate("/");
+    }
+  }, []);
 
   const loginSubmitHandler = (e) => {
     e.preventDefault();

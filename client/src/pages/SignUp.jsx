@@ -8,9 +8,11 @@ const SignUp = () => {
   const navigate = useNavigate();
   const ctx = useContext(Context);
 
-  if (ctx.isLoggedIn) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (ctx.isLoggedIn) {
+      navigate("/");
+    }
+  }, []);
 
   const signUpHandler = (e) => {
     e.preventDefault();
