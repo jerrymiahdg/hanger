@@ -108,7 +108,7 @@ const CloCat = () => {
         </div>
       )}
       <div className="flex justify-center w-full px-5 py-10">
-        <div className="max-w-5xl w-full">
+        <div className="max-w-3xl w-full">
           <div className="flex flex-col gap-10 w-full">
             {clothingItems.map((item) => (
               <div
@@ -141,9 +141,9 @@ const CloCat = () => {
                     </>
                   ) : (
                     <div className="flex gap-2 items-center">
-                      <a className="text-red-300 font-bold">wash now</a>
+                      <a className="text-red-600 font-bold">wash now</a>
                       <button
-                        className="p-1 bg-white opacity-75 text-gray-800 rounded-md hover:opacity-100"
+                        className="p-1 bg-emerald-300 opacity-75 rounded-md hover:opacity-100"
                         onClick={washedClickHandler(item.id)}
                       >
                         washed?

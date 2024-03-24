@@ -123,7 +123,7 @@ const Edit = () => {
         </div>
       )}
       <div className="flex justify-center w-full px-5 py-10">
-        <div className="max-w-5xl w-full">
+        <div className="max-w-3xl w-full">
           <div className="flex flex-col gap-10 w-full">
             {clothingItems.map((item) => (
               <div className="p-8 border border-emerald-300 rounded-2xl flex flex-col gap-5">

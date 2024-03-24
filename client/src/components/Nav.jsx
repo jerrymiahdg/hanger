@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <div className="flex justify-center border-b border-emerald-300 align-center bg-emerald-200">
-      <div className="flex justify-between max-w-5xl w-full items-center p-5 left-auto right-auto">
+      <div className="flex justify-between max-w-3xl w-full items-center p-5 left-auto right-auto">
         <div className="flex gap-5 items-center">
           <Link to="/" className="flex gap-5 items-center">
             <svg
