@@ -42,31 +42,31 @@ const LogIn = () => {
   return (
     <div className="flex justify-center">
       <form
-        className="flex flex-col w-96 justify-self-center border rounded-xl p-10 m-20 gap-10"
+        className="flex flex-col w-96 justify-self-center border border-emerald-300 rounded-xl p-10 m-20 gap-10"
         onSubmit={loginSubmitHandler}
       >
         <input
           placeholder="Username"
-          className="p-3 text-center border bg-transparent rounded-md"
+          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           placeholder="Password"
-          className="p-3 text-center border bg-transparent rounded-md"
+          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
         />
         <button
           type="submit"
-          className="hover:opacity-100 opacity-75 bg-slate-100 text-slate-800 transition p-3 rounded-md"
+          className="hover:opacity-100 opacity-75 bg-emerald-400 transition p-3 rounded-md outline-none focus:shadow-lg shadow-emerald-400"
         >
           Log in
         </button>
         <p className="text-center">
           Don't have an account?{" "}
-          <Link to="/signup" className="text-blue-300">
+          <Link to="/signup" className="text-indigo-600">
             Sign up
           </Link>
         </p>

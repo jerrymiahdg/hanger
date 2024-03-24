@@ -83,22 +83,25 @@ const CloCat = () => {
           </h1>
         </div>
       )}
-      <div className="flex justify-center w-full pl-8 pr-8">
-        <div className="max-w-7xl w-full">
-          <div className="flex justify-center gap-20 w-full items-center flex-wrap p-20">
+      <div className="flex justify-center w-full px-5 py-10">
+        <div className="max-w-5xl w-full">
+          <div className="flex flex-col gap-10 w-full">
             {clothingItems.map((item) => (
-              <div className="p-8 border rounded-2xl" key={item.id}>
+              <div
+                className="p-8 border border-emerald-300 rounded-2xl"
+                key={item.id}
+              >
                 <h1 className="font-bold text-4xl">{item.name}</h1>
                 <div className="flex items-center gap-2 pt-1">
                   <h2>{item.numWears} wears</h2>
                   <div
-                    className="bg-white rounded-full opacity-75 hover:opacity-100 cursor-pointer transition-all"
+                    className="bg-emerald-300 rounded-full opacity-75 hover:opacity-100 cursor-pointer transition-all"
                     onClick={incrementNumWearsHandler(item.id)}
                   >
                     <ExpandLess />
                   </div>
                   <div
-                    className="bg-white rounded-full opacity-75 hover:opacity-100 cursor-pointer transition-all"
+                    className="bg-emerald-300 rounded-full opacity-75 hover:opacity-100 cursor-pointer transition-all"
                     onClick={decrementNumWearsHandler(item.id)}
                   >
                     <ExpandMore />
@@ -107,7 +110,7 @@ const CloCat = () => {
                 <h1 className="mt-3">
                   {item.wearsUntilWash - item.numWears > 0 ? (
                     <>
-                      <a className="text-blue-300 font-bold">
+                      <a className="text-indigo-500 font-bold">
                         {item.wearsUntilWash - item.numWears}
                       </a>{" "}
                       more wears until needs wash

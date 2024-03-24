@@ -7,7 +7,7 @@ const Underline = ({ prop }) => {
     <div
       className={`${
         path === prop ? "w-full" : "w-0"
-      } bg-white h-px group-hover:w-full ease-in transition-all`}
+      } bg-emerald-300 h-px group-hover:w-full ease-in transition-all`}
     ></div>
   );
 };

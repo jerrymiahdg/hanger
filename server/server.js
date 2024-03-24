@@ -48,6 +48,10 @@ server.get("/assets/logo", (req, res) => {
   res.sendFile(path.join(__dirname + "/assets/clocat.png"));
 });
 
+server.get("/*", (req, res) =>
+  res.sendFile(path.join(__dirname, "..", "client/dist", "index.html"))
+);
+
 sequelize
   .sync()
   .then(() => {

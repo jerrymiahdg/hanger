@@ -38,25 +38,24 @@ const Add = () => {
   return (
     <div className="flex justify-center">
       <form
-        className="flex flex-col w-96 justify-self-center border rounded-xl p-10 m-20 gap-10"
+        className="flex flex-col w-96 justify-self-center border border-emerald-300 rounded-xl p-10 m-20 gap-10"
         onSubmit={addHandler}
       >
         <input
           placeholder="Item name"
-          className="p-3 text-center border bg-transparent rounded-md"
+          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
-          placeholder="Wears until this item needs a wash"
-          className="p-3 text-center border bg-transparent rounded-md"
+          placeholder="Wears until wash"
+          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={wearsUntilWash}
-          type="number"
           onChange={(e) => setWearsUntilWash(e.target.value)}
         />
         <button
           type="submit"
-          className="hover:opacity-100 opacity-75 bg-slate-100 text-slate-800 transition p-3 rounded-md"
+          className="hover:opacity-100 opacity-75 bg-emerald-400 transition p-3 rounded-md outline-none focus:shadow-lg shadow-emerald-400"
         >
           Add clothing item
         </button>

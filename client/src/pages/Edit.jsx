@@ -87,7 +87,7 @@ const Edit = () => {
             {clothingItemsFetched ? (
               <>
                 You have no clothing items,{" "}
-                <Link to="/add" className="text-blue-300">
+                <Link to="/add" className="text-indigo-500">
                   add your first one
                 </Link>
               </>
@@ -97,50 +97,51 @@ const Edit = () => {
           </h1>
         </div>
       )}
-      <div className="flex justify-center w-full pl-8 pr-8">
-        <div className="max-w-7xl w-full">
-          <div className="flex justify-center gap-20 w-full items-center flex-wrap p-20">
+      <div className="flex justify-center w-full px-5 py-10">
+        <div className="max-w-5xl w-full">
+          <div className="flex flex-col gap-10 w-full">
             {clothingItems.map((item) => (
-              <div className="p-8 border rounded-2xl flex flex-col gap-2">
-                <h1 className="font-bold text-xl">
-                  Name:{" "}
+              <div className="p-8 border border-emerald-300 rounded-2xl flex flex-col gap-5">
+                <div className="flex gap-2 w-full">
+                  <h1 className="font-bold text-xl">Name:</h1>
                   <input
-                    className="font-normal"
+                    className="font-normal bg-transparent border-b border-emerald-400 w-full"
                     value={item.name}
                     onChange={nameInputChangeHandler(item.id)}
                   />
-                </h1>
-                <h1 className="font-bold text-xl">
-                  Wears until wash:{" "}
+                </div>
+                <div className="flex gap-2 w-full">
+                  <h1 className="font-bold text-nowrap text-xl">
+                    Wears until wash:
+                  </h1>
                   <input
-                    className="font-normal"
+                    className="font-normal bg-transparent border-b border-emerald-400 w-full"
                     value={item.wearsUntilWash}
-                    type="number"
                     onChange={wearsUntilWashInputChangeHandler(item.id)}
                   />
-                </h1>
+                </div>
                 <button
-                  className="bg-white opacity-75 p-1 text-gray-800 rounded-sm hover:opacity-100 w-fit transition-all"
+                  className="bg-emerald-300 opacity-75 p-1 rounded-sm hover:opacity-100 w-full transition-all"
                   onClick={deleteClickHandler(item.id)}
                 >
                   Delete
                 </button>
               </div>
             ))}
-          </div>
-          <div className="flex gap-3">
-            <button
-              className="bg-white opacity-75 p-1 text-gray-800 rounded-sm hover:opacity-100 w-fit transition-all"
-              onClick={saveChangesClickHandler}
-            >
-              Save changes
-            </button>{" "}
-            <button
-              className="bg-white opacity-75 p-1 text-gray-800 rounded-sm hover:opacity-100 w-fit transition-all"
-              onClick={resetClickHandler}
-            >
-              Reset
-            </button>
+            <div className="flex gap-3">
+              <button
+                className="bg-emerald-300 opacity-75 p-2 rounded-sm hover:opacity-100 w-fit transition-all"
+                onClick={saveChangesClickHandler}
+              >
+                Save changes
+              </button>{" "}
+              <button
+                className="bg-emerald-300 opacity-75 p-2 rounded-sm hover:opacity-100 w-fit transition-all"
+                onClick={resetClickHandler}
+              >
+                Reset
+              </button>
+            </div>
           </div>
         </div>
       </div>
