@@ -26,7 +26,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex justify-center border-b border-emerald-300 shadow-md shadow-emerald-300 align-center bg-emerald-200">
+    <div className="flex justify-center border-b border-emerald-300 align-center bg-emerald-200">
       <div className="flex justify-between max-w-5xl w-full items-center p-5 left-auto right-auto">
         <div className="flex gap-5 items-center">
           <Link to="/" className="flex gap-5 items-center">
@@ -68,10 +68,6 @@ const Nav = () => {
             </>
           ) : (
             <>
-              <Link to="/about-us" className="group">
-                About us
-                <Underline prop="/about-us" />
-              </Link>
               <Link to="/login" className="group">
                 Log in
                 <Underline prop="/login" />

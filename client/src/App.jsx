@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <Context.Provider value={{ isLoggedIn, setIsLoggedIn }}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="flex flex-col h-screen">
           <Nav />
           <Routes>
@@ -46,7 +46,7 @@ const App = () => {
             <Route path="edit-catalogue" element={<Edit />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Context.Provider>
   );
 };

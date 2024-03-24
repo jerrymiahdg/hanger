@@ -41,15 +41,16 @@ const Add = () => {
         className="flex flex-col w-96 justify-self-center border border-emerald-300 rounded-xl p-10 m-20 gap-10"
         onSubmit={addHandler}
       >
+        <h1 className="text-3xl font-bold">Add item</h1>
         <input
           placeholder="Item name"
-          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
+          className="p-3 placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           placeholder="Wears until wash"
-          className="p-3 text-center placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
+          className="p-3 placeholder:focus:opacity-0 placeholder:text-emerald-400 outline-none border border-emerald-300 bg-transparent rounded-md focus:shadow-lg shadow-emerald-400"
           value={wearsUntilWash}
           onChange={(e) => setWearsUntilWash(e.target.value)}
         />
