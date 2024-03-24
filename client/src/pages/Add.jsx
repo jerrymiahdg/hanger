@@ -36,9 +36,9 @@ const Add = () => {
   };
 
   return (
-    <div className="flex justify-center h-screen items-center py-5 px-5">
+    <div className="flex justify-center py-10 px-5">
       <form
-        className="flex flex-col max-w-lg w-full justify-self-center border translate-y-[-81px] border-emerald-300 rounded-xl px-5 py-10 gap-10"
+        className="flex flex-col max-w-lg w-full justify-self-center border border-emerald-300 rounded-xl px-5 py-10 gap-10"
         onSubmit={addHandler}
       >
         <h1 className="text-3xl font-bold">Add item</h1>
