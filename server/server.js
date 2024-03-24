@@ -16,7 +16,11 @@ server.use(bodyParser.urlencoded({ extended: false }));
 server.use(express.json());
 server.use(
   cors({
-    origin: ["http://localhost:5173", "https://hanger-client.onrender.com"],
+    origin: [
+      "http://localhost:5173",
+      "https://hanger-client.onrender.com",
+      "https://hanger-navy.vercel.app/",
+    ],
     credentials: true,
   })
 );
