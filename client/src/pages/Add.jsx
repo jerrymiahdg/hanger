@@ -60,12 +60,6 @@ const Add = () => {
         >
           Add item
         </button>
-        <p>
-          Don't have an account?{" "}
-          <Link to="/signup" className="text-indigo-600">
-            Sign up
-          </Link>
-        </p>
       </form>
     </div>
   );
